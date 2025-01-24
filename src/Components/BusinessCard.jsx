@@ -19,6 +19,7 @@ const businesses = [
         sustainabilityRating: 4.1,
         compensation: "71 Iron Notes/wk",
         tags: ["Technology", "Innovation"],
+        website: "",
     },
     {
         businessName: "AstroBoots",
@@ -29,6 +30,7 @@ const businesses = [
         sustainabilityRating: 4.4,
         compensation: "54 Iron Notes/wk",
         tags: ["Footwear", "Durability"],
+        website: "",
     },
     {
         businessName: "Ironclad Steel",
@@ -39,6 +41,7 @@ const businesses = [
         sustainabilityRating: 3.2,
         compensation: "63 Iron Notes/wk",
         tags: ["Steel", "Industry"],
+        website: "",
     },
     {
         businessName: "Astraeus Diner",
@@ -48,6 +51,7 @@ const businesses = [
         cultureRating: 4.7,
         sustainabilityRating: 4.5,
         compensation: "47 Iron Notes/wk",
+        website: "",
     },
 ];
 
@@ -57,6 +61,7 @@ export default function BusinessCard({
     businessLink,
     imageLink,
     tags,
+    website,
 }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => setIsModalOpen(true);
@@ -131,6 +136,15 @@ export default function BusinessCard({
                             </p>
                         </div>
                     </div>
+                    
+                    <div className="card-actions justify-center mb-2">
+                        <div className="btn btn-primary">
+                            <a href={business.website} target="">
+                                Visit Website
+                            </a>
+                        </div> 
+                    </div>
+
                     <div className="modal-action">
                         <button className="btn" onClick={closeModal}>
                             Close

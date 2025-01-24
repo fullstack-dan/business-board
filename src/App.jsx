@@ -26,15 +26,48 @@ const HomePage = () => {
                     </a>
                 </div>
                 <div className="flex-none">
-                    <ul className="menu menu-horizontal px-1">
-                        <li>
-                            <a>Add your business</a>
-                        </li>
-                        <li>
-                            <a href="">Register</a>
-                        </li>
-                    </ul>
-                </div>
+                  <ul className="menu menu-horizontal px-1">
+                      <li className="dropdown dropdown-end">
+                          <label tabIndex={0} className="btn btn-ghost">Add Your Business</label>
+                          <ul tabIndex={0} className="dropdown-content menu p-4 shadow bg-base-100 rounded-box w-64">
+                              <li>
+                                  <input type="text" placeholder="Business Name" className="input input-bordered w-full my-1" />
+                              </li>
+                              <li>
+                                  <input type="text" placeholder="Industry Type" className="input input-bordered w-full my-1" />
+                              </li>
+                              <li>
+                                  <input type="url" placeholder="Website (Optional)" className="input input-bordered w-full my-1" />
+                              </li>
+                              <li>
+                                  <textarea placeholder="Business Description" className="textarea textarea-bordered w-full my-1"></textarea>
+                              </li>
+                              <li>
+                                  <button className="btn btn-primary w-full">Submit</button>
+                              </li>
+                          </ul>
+                      </li>
+
+                      <li className="dropdown dropdown-end">
+                          <label tabIndex={0} className="btn btn-ghost">Register</label>
+                          <ul tabIndex={0} className="dropdown-content menu p-4 shadow bg-base-100 rounded-box w-52">
+                              <li>
+                                  <input type="text" placeholder="Full Name" className="input input-bordered w-full my-1" />
+                              </li>
+                              <li>
+                                  <input type="email" placeholder="Email" className="input input-bordered w-full my-1" />
+                              </li>
+                              <li>
+                                  <input type="password" placeholder="Password" className="input input-bordered w-full my-1" />
+                              </li>
+                              <li>
+                                  <button className="btn btn-primary w-full">Submit</button>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+
             </div>
 
             {/* Hero */}
@@ -60,10 +93,10 @@ const HomePage = () => {
                         imageLink={ironPlant}
                     />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide4" className="btn btn-circle">
+                        <a className="btn btn-circle"  onClick={() => document.getElementById("slide4").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                             ❮
                         </a>
-                        <a href="#slide2" className="btn btn-circle">
+                        <a className="btn btn-circle"  onClick={() => document.getElementById("slide2").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                             ❯
                         </a>
                     </div>
@@ -76,10 +109,10 @@ const HomePage = () => {
                         imageLink={diner}
                     />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide1" className="btn btn-circle">
+                        <a className="btn btn-circle"  onClick={() => document.getElementById("slide1").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                             ❮
                         </a>
-                        <a href="#slide3" className="btn btn-circle">
+                        <a className="btn btn-circle"  onClick={() => document.getElementById("slide3").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                             ❯
                         </a>
                     </div>
@@ -92,10 +125,10 @@ const HomePage = () => {
                         imageLink={shoeStore}
                     />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide2" className="btn btn-circle">
+                        <a className="btn btn-circle"  onClick={() => document.getElementById("slide2").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                             ❮
                         </a>
-                        <a href="#slide4" className="btn btn-circle">
+                        <a className="btn btn-circle"  onClick={() => document.getElementById("slide4").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                             ❯
                         </a>
                     </div>
@@ -108,10 +141,10 @@ const HomePage = () => {
                         imageLink={tech}
                     />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide3" className="btn btn-circle">
+                        <a className="btn btn-circle" onClick={() => document.getElementById("slide3").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                             ❮
                         </a>
-                        <a href="#slide1" className="btn btn-circle">
+                        <a className="btn btn-circle"  onClick={() => document.getElementById("slide1").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                             ❯
                         </a>
                     </div>
@@ -120,16 +153,16 @@ const HomePage = () => {
 
             {/* Navigation Dots */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                <a href="#slide1" className="btn btn-xs btn-primary">
+                <a className="btn btn-xs btn-primary"  onClick={() => document.getElementById("slide1").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                     1
                 </a>
-                <a href="#slide2" className="btn btn-xs btn-primary">
+                <a className="btn btn-xs btn-primary"  onClick={() => document.getElementById("slide2").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                     2
                 </a>
-                <a href="#slide3" className="btn btn-xs btn-primary">
+                <a className="btn btn-xs btn-primary"  onClick={() => document.getElementById("slide3").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                     3
                 </a>
-                <a href="#slide4" className="btn btn-xs btn-primary">
+                <a className="btn btn-xs btn-primary"  onClick={() => document.getElementById("slide4").scrollIntoView({ behavior: "smooth", block: "nearest" })}>
                     4
                 </a>
             </div>
